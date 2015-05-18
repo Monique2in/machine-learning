@@ -1,0 +1,5 @@
+library(party)
+cancer_data <- read.csv("bc_data.csv")
+cancer_ctree <- ctree(Class ~ clump_thickness + uniformity_of_cell_size + uniformity_of_cell_shape + marginal_adhersion + single_epithelial + bare_nucleoli + bland_chromatin + normal_nucleoli + mitoses, data=cancer_data)
+print(cancer_ctree)
+plot(cancer_ctree, type="simple")
